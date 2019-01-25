@@ -8,13 +8,14 @@ var express             = require("express"),
 
 //mongoose.connect('mongodb://localhost/mkiot', { useNewUrlParser: true });
 
-mongoose.connect("mongodb://tokenbar.documents.azure.com:10255/?ssl=true&replicaSet=globaldb" || database.localUrl,{
+mongoose.connect("mongodb://mkiot.documents.azure.com:10255/?ssl=true" || database.localUrl,{
     auth:{  
-        user:"tokenbar",
-        password:"IcLSCWlDrDdIA4AXz4aamdOcixvL8rOLbHzvGWnRq4sRsUMj1ad33REFpRyFAt7TncWzMWmPlyhMs5nxo5w62A==",
+        user:"mkiot",
+        password:"mzeMQp2hRHR31bV6J8G6E9eDV63UKwW6jFz2NJYYJwXAXhkGcnc8qdANA6rrXjRM7yb3YShhVMqbaL3B3NLCIQ==",
     }}, function(err, db){
         
     });
+
 
 app.use(bodyParser.json());
     
