@@ -3,7 +3,7 @@ var express             = require("express"),
     mongoose            = require('mongoose'),
     bodyParser          = require("body-parser"),
     Obd                 = require("./models/odb"),
-    port                = process.env.PORT || 3001;
+    port                = process.env.PORT || 8080;
 
 
 //mongoose.connect('mongodb://localhost/mkiot', { useNewUrlParser: true });
