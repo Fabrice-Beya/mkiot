@@ -5,16 +5,16 @@ var express             = require("express"),
     Obd                 = require("./models/odb"),
     port                = process.env.PORT || 3000;
 
-// local mongodb server
+
 //mongoose.connect('mongodb://localhost/mkiot', { useNewUrlParser: true });
 
-// Set up mongoose connection
 let dev_db_url = 'mongodb://sensurobd:sensur001@ds243812.mlab.com:43812/tokenbar';
-let mongoDB = process.env.MONGODB_URI;
+let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 app.use(bodyParser.json());
     
