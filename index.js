@@ -18,7 +18,7 @@ var express             = require("express"),
 // Set up mongoose connection
 
 let dev_db_url = 'mongodb://sensurobd:sensur001@ds243812.mlab.com:43812/tokenbar';
-let mongoDB = process.env.MONGODB_URI || dev_db_url;
+let mongoDB = process.env.MONGODB_URI || database.localUrl;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
