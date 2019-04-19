@@ -12,6 +12,7 @@ var obdSchema = mongoose.Schema({
    cotmp   :{type: String, default:''},
    bar   :{type: String, default:''},
    amtmp   :{type: String, default:''},
+   time   :{type: String, default:''},
    lat: {type: String, default:''},
    lng: {type: String, default:''},
    acc: {type: String, default:''}
