@@ -3,6 +3,7 @@ var express             = require("express"),
     mongoose            = require('mongoose'),
     bodyParser          = require("body-parser"),
     Obd                 = require("./models/odb"),
+    Live                 = require("./models/live"),
     Pid                 = require("./models/pid"),
     port                = process.env.PORT || 3000;
 
@@ -39,6 +40,26 @@ app.post("/pid", function(req, res){
             console.log(err);
         } else {
             res.json(newObd);
+        }
+    })
+})
+
+app.post("/live", function(req, res){
+    Live.create(req.body, function(err, data){
+        if(err){
+            console.log(err);
+        } else {
+            res.json(data);
+        }
+    })
+})
+
+app.get("/live", function(req, res){
+    Live.find({}, function(err, data){
+        if(err){
+            console.log(err);
+        } else {
+            res.json(data);
         }
     })
 })
