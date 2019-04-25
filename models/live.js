@@ -2,6 +2,7 @@ var mongoose    = require("mongoose");
 
 var liveSchema = mongoose.Schema({
    vin   :{type: String, default:''},
+   devid   :{type: String, default:''},
    number   :{type: String, default:''},
    speed   :{type: String, default:''},
    rpm   :{type: String, default:''},
