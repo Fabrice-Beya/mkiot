@@ -15,7 +15,8 @@ var obdSchema = mongoose.Schema({
    time   :{type: String, default:''},
    lat: {type: String, default:''},
    lng: {type: String, default:''},
-   acc: {type: String, default:''}
+   dist: {type: String, default:''},
+   flr: {type: String, default:''}
 });
 
 module.exports = mongoose.model("Obd", obdSchema);
