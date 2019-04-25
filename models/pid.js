@@ -16,7 +16,9 @@ var pidSchema = mongoose.Schema({
    lat: {type: String, default:''},
    lng: {type: String, default:''},
    dist: {type: String, default:''},
-   flr: {type: String, default:''}
+   flr: {type: String, default:''},
+   ful: {type: String, default:''},
+   vol: {type: String, default:''}
 });
 
 module.exports = mongoose.model("Pid", pidSchema);
