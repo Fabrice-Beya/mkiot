@@ -1,6 +1,9 @@
 var mongoose    = require("mongoose");
 
 var pidSchema = mongoose.Schema({
+    vin   :{type: String, default:''},
+    no   :{type: String, default:''},
+    id   :{type: String, default:''},
     1	:{type: String, default:''},
     2	:{type: String, default:''},
     3	:{type: String, default:''},
