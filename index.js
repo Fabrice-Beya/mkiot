@@ -3,6 +3,7 @@ var express             = require("express"),
     mongoose            = require('mongoose'),
     bodyParser          = require("body-parser"),
     Obd                 = require("./models/odb"),
+    Pid                 = require("./models/pid"),
     port                = process.env.PORT || 3000;
 
 
@@ -32,8 +33,28 @@ app.post("/obd", function(req, res){
     })
 })
 
+app.post("/pid", function(req, res){
+    Pid.create(req.body, function(err, newObd){
+        if(err){
+            console.log(err);
+        } else {
+            res.json(newObd);
+        }
+    })
+})
+
 app.get("/obd", function(req, res){
     Obd.find({}, function(err, obd){
+        if(err){
+            console.log(err);
+        } else {
+            res.json(obd);
+        }
+    })
+})
+
+app.get("/pid", function(req, res){
+    Pid.find({}, function(err, obd){
         if(err){
             console.log(err);
         } else {

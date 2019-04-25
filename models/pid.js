@@ -1,0 +1,23 @@
+var mongoose    = require("mongoose");
+
+var pidSchema = mongoose.Schema({
+   vin   :{type: String, default:''},
+   no   :{type: String, default:''},
+   id   :{type: String, default:''},
+   spd   :{type: String, default:''},
+   rpm   :{type: String, default:''},
+   engld   :{type: String, default:''},
+   trl   :{type: String, default:''},
+   intmp   :{type: String, default:''},
+   cotmp   :{type: String, default:''},
+   bar   :{type: String, default:''},
+   amtmp   :{type: String, default:''},
+   time   :{type: String, default:''},
+   lat: {type: String, default:''},
+   lng: {type: String, default:''},
+   dist: {type: String, default:''},
+   flr: {type: String, default:''}
+});
+
+module.exports = mongoose.model("Pid", pidSchema);
+
