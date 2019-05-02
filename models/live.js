@@ -6,12 +6,16 @@ var liveSchema = mongoose.Schema({
    number   :{type: String, default:''},
    speed   :{type: String, default:''},
    rpm   :{type: String, default:''},
-   distance   :{type: String, default:''},
-   runtime   :{type: String, default:''},
-   fuel   :{type: String, default:''},
+   dst   :{type: String, default:''},
+   rt   :{type: String, default:''},
+   fl   :{type: String, default:''},
    time   :{type: String, default:''},
    lat: {type: String, default:''},
    lng: {type: String, default:''},
+   trq: {type: String, default:''},
+   frp: {type: String, default:''},
+   efr: {type: String, default:''},
+   trl: {type: String, default:''},
 });
 
 module.exports = mongoose.model("Live", liveSchema);
