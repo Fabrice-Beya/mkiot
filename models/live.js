@@ -16,6 +16,9 @@ var liveSchema = mongoose.Schema({
    frp: {type: String, default:''},
    efr: {type: String, default:''},
    trl: {type: String, default:''},
+   acd: {type: String, default:''},
+   ace: {type: String, default:''},
+   acf: {type: String, default:''},
 });
 
 module.exports = mongoose.model("Live", liveSchema);
