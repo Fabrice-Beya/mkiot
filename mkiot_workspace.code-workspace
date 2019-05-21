@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "D:\\Freematics\\Freematics-master\\firmware_v4\\libraries\\FreematicsONE"
-		},
-		{
-			"path": "D:\\Freematics\\firmware_v4"
 		}
 	],
 	"settings": {}
